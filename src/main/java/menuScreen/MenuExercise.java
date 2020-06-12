@@ -56,6 +56,8 @@ public class MenuExercise extends Application {
 
         // Setting the stage
         Scene root = new Scene(pane, 500, 300);
+        String css = this.getClass().getResource("styles.css").toExternalForm();
+        root.getStylesheets().addAll(css);
         primaryStage.setScene(root);
         primaryStage.setTitle("Basic Menu Exercise");
         primaryStage.show();
@@ -63,15 +65,21 @@ public class MenuExercise extends Application {
 
     public void action(ActionEvent e) {
         Control c = (Control) e.getSource();
+        Label sLabel = new Label("Ese boton esta en espanol");
+        sLabel.setId("sLabel");
+        Label jLabel = new Label("そのボタンはにほんごですよ。");
+        jLabel.setId("jLabel");
+        Label eLabel = new Label("That button is in English.");
+        eLabel.setId("eLabel");
         switch (c.getId()) {
             case "spanish":
-                pane.setCenter(new Label("Ese boton esta en espanol"));
+                pane.setCenter(sLabel);
                 break;
             case "japanese":
-                pane.setCenter(new Label("そのボタンはにほんごですよ。"));
+                pane.setCenter(jLabel);
                 break;
             case "english":
-                pane.setCenter(new Label("That button is in English."));
+                pane.setCenter(eLabel);
                 break;
         }
     }

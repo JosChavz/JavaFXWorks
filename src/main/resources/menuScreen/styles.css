@@ -1,0 +1,16 @@
+@font-face {
+    font-family: "English Towne";
+    src: url("../fonts/EnglishTowne.ttf");
+}
+@font-face {
+    font-family: "Japanese Tourist";
+    src: url("../fonts/japanese_tourist/JapaneseTourist.ttf");
+}
+@font-face {
+    font-family: "Mexican Fiesta";
+    src: url("../fonts/mexican_fiesta/mexicanFiesta.ttf");
+}
+
+#sLabel { -fx-font-family: "Mexican Fiesta"; -fx-font-size: 30; }
+#jLabel { -fx-font-family: "Japanese Tourist"; -fx-font-size: 30; }
+#eLabel { -fx-font-family: "English Towne"; -fx-font-size: 30; }
